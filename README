@@ -8,8 +8,6 @@ This goal of this project is to automate career planning and tracking.
 
 Tagine is a not-very-sneaky code name, mainly because I don't know what else to call it yet!
 
-The Performance Management and Rewards systems I have worked with have always been based on Word Documents, 
-Excel spreadsheets, todo lists and tend to foster a scattergun approach.
+The Performance Management and Rewards systems I have worked with have always been based on Word Documents, Excel spreadsheets, todo lists and tend to foster a scattergun approach.
 
-With a well-designed data model, and a user-friendly UI - implemented in Spring MC 3.0 - this type of system 
-could be made easier to use.
+With a well-designed data model, and a user-friendly UI - implemented in Spring MVC 3.0 - this type of system could be made easier to use. That's what this project will hopefully contain more and more of over time.
