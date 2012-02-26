@@ -1,0 +1,16 @@
+.menu-panel {
+    background-color:#7fffd4;
+}
+
+.submit-button {
+    background-color: orange;
+    border: 0;
+    color: white;
+    width: 50px;
+    align: center;
+}
+
+.table-cell {
+    font-weight: bold;
+    background-color: #ffefd5;
+}

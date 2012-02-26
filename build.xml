@@ -5,7 +5,9 @@
 
     <property name="src.dir" value="src"/>
     <property name="web.dir" value="war"/>
+    <property name="resources.dir" value="resources"/>
     <property name="build.dir" value="${web.dir}/WEB-INF/classes"/>
+    <property name="resources.dest.dir" value="${}"/>
     <property name="name" value="tagine"/>
 
     <path id="master-classpath">
@@ -44,16 +46,36 @@
 
     <target name="build" description="Compile main source tree java files">
         <mkdir dir="${build.dir}"/>
+        
         <javac destdir="${build.dir}" source="1.5" target="1.5" debug="true"
                deprecation="false" optimize="false" failonerror="true" includeantruntime="true">
             <src path="${src.dir}"/>
             <classpath refid="master-classpath"/>
         </javac>
+        
+    	<copy todir="${build.dir}" preservelastmodified="true">
+    		<fileset dir="${src.dir}">
+    			<include name="*.properties" />
+    		</fileset>
+   		</copy>
+        
+        <copy todir="${build.dir}" preservelastmodified="true">
+            <fileset dir="${resources.dir}">
+                <include name="*.css" />
+            </fileset>
+        </copy>
+        
+        
     </target>
 
     <target name="deploy" depends="build" description="Deploy application">
         <copy todir="${deploy.path}/${name}" preservelastmodified="true">
             <fileset dir="${web.dir}">
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${deploy.path}/${name}/resources" preservelastmodified="true">
+            <fileset dir="${resources.dir}">
                 <include name="**/*.*"/>
             </fileset>
         </copy>

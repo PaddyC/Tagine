@@ -10,17 +10,16 @@ import com.tagine.form.LandingPageForm;
 @Controller
 public class LandingPageController {
 	
-	@RequestMapping(value="/", method=RequestMethod.GET)
+	@RequestMapping(value="/start.form", method=RequestMethod.GET)
     public String home(ModelMap modelMap) {
-        System.out.println("Landing Page Controller: Passing through...");
         
-        LandingPageForm landingPageForm = new LandingPageForm();
+		LandingPageForm landingPageForm = new LandingPageForm();
         landingPageForm.setMessage("This message is in the Landing Page Form");
         modelMap.addAttribute("landingPageForm", landingPageForm);
         
         modelMap.addAttribute("info", "This info message is in the model map");
         
-        return "home";
+        return "landing";
     }
 
 }
