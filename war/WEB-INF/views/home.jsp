@@ -1,6 +1,6 @@
 <%@ page session="false" %>
 <%@ page isELIgnored="false" %>
-<link rel="stylesheet" href="../resources/css/tagine.css" type="text/css"></link>
+<link rel="stylesheet" type="text/css" href="resources/css/tagine.css" ></link>
 
 <html>
     <head>
@@ -10,22 +10,54 @@
     
 	    <form:form method="post" commandName="landingPageForm">                         
 	       
-	        <h1>Hello world!</h1>
-	        
 	        <table>
 	        	<tr>
-	        		<td>
-	        			<h1>Message : ${landingPageForm.message} </h1>
+	        		<td align ="center">
+	        		 	<h1>Landing Page</h1>
 	        		</td>
 	        	</tr>
 	        	<tr>
-	        		<td class="table-cell">
-	        		     <h2>Info : ${info} </h2>
+	        		<td>
+	        			${landingPageForm.message}
 	        		</td>
 	        	</tr>
+
+                <tr>
+                    &nbsp;
+                </tr>
+
+	        	<tr>
+	        		<td>
+	        		     ${info}
+	        		</td>
+	        	</tr>
+
+
+                <tr>
+                   <td>
+                       &nbsp;
+                   </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        These buttons do nothing for the moment.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center">
+                        <input class="submit-button" type="submit" name="Start" value="Start" />
+                    </td>
+                </tr>
 	        </table>
-	    
-	        <input type="submit" name="Next" value="next" />
+
 		</form:form> 
         
     </body>
